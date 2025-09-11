@@ -5,7 +5,6 @@ ARG NODE_PACKAGE_VERSION=24.7.0
 
 WORKDIR /opt
 RUN apk update \
-    && apk --no-cache add libstdc++ \
     && wget https://unofficial-builds.nodejs.org/download/release/v${NODE_PACKAGE_VERSION}/node-v${NODE_PACKAGE_VERSION}-linux-x64-musl.tar.gz \
     && mkdir -p /opt/nodejs \
     && tar -zxvf *.tar.gz --directory /opt/nodejs --strip-components=1 \
