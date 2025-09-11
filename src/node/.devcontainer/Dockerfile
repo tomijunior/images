@@ -15,3 +15,5 @@ RUN apk update \
     && ln -s /opt/nodejs/bin/npx /usr/local/bin/npx \
     && apk --no-cache add yarn \
     && npm install --global eslint 
+
+ENV PATH="/opt/nodejs/bin:$PATH"
